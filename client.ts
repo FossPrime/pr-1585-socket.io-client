@@ -3,10 +3,11 @@
 import {feathers} from '@feathersjs/feathers'
 import authentication from '@feathersjs/authentication-client'
 import socketio from '@feathersjs/socketio-client'
-// OLD: import io from 'socket.io-client'
-import io from 'patch' // new
 import type {MessagesResult} from './src/services/messages/messages.schema.js'
 import type {UsersData} from './src/services/users/users.schema.js'
+
+// import io from 'socket.io-client' // OLD
+import io from 'patch' // New
 
 // Establish a Socket.io connection
 const socket = io(import.meta.env.VITE_FV_URL, {
